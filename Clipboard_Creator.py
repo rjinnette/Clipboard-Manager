@@ -1,3 +1,10 @@
+'''
+This code allows me to create a dynamic prefix, adds it to my clipboard manager and
+clears exsiting history for easy access. I use modules to emulate the keyboard
+and the datetime library to fetch the current date. I organized into functions
+for easier organization
+'''
+
 import pynput.keyboard
 import pyperclip as pc
 import datetime as dt
