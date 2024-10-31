@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Required parameters:
 # @raycast.schemaVersion 1
@@ -11,6 +11,8 @@
 # Documentation:
 # @raycast.description uses clipboard creator
 
-cd /Users/ryanjinnette/PycharmProjects/Clipboard
+cd /Users/ryanjinnette/Documents/Code/ClipBoard/
+source venv/bin/activate
 python3 Clipboard_Creator.py
+deactivate
 

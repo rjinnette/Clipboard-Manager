@@ -43,7 +43,7 @@ def pin():
     kb.press(Key.cmd)
     kb.press(Key.shift_l)
     kb.press('p')
-    time.sleep(1)
+    time.sleep(2)
     kb.release(Key.cmd)
     kb.release(Key.shift_l)
     kb.release('p')
@@ -71,6 +71,7 @@ def main():
     release_ray()
     time.sleep(0.5)
     clear_cb()
+    time.sleep(2)
     clear_pin()  # clears any prior pin
     clear_cb()
     time.sleep(0.5)
