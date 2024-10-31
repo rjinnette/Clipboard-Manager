@@ -1,11 +1,10 @@
-'''
+"""
 This code allows me to create a dynamic prefix, adds it to my clipboard manager and
 clears exsiting history for easy access. I use modules to emulate the keyboard
 and the datetime library to fetch the current date. I organized into functions
 for easier organization
-'''
+"""
 
-import pynput.keyboard
 import pyperclip as pc
 import datetime as dt
 from pynput.keyboard import Controller, Key
@@ -17,10 +16,10 @@ kb = Controller()
 def clear_cb():
     kb.press(Key.ctrl_l)
     kb.press(Key.shift_l)
-    kb.press('x')
+    kb.press("x")
     kb.release(Key.ctrl_l)
     kb.release(Key.shift_l)
-    kb.release('x')
+    kb.release("x")
     time.sleep(0.5)
     kb.press(Key.enter)
     kb.release(Key.enter)
@@ -30,23 +29,23 @@ def clear_cb():
 def open_ray():
     kb.press(Key.cmd)
     kb.press(Key.shift_l)
-    kb.press('c')
+    kb.press("c")
 
 
 def release_ray():
     kb.release(Key.cmd)
     kb.release(Key.shift_l)
-    kb.release('c')
+    kb.release("c")
 
 
 def pin():
     kb.press(Key.cmd)
     kb.press(Key.shift_l)
-    kb.press('p')
+    kb.press("p")
     time.sleep(2)
     kb.release(Key.cmd)
     kb.release(Key.shift_l)
-    kb.release('p')
+    kb.release("p")
 
 
 def clear_pin():
@@ -58,9 +57,9 @@ def get_format_date():
     date = str(dt.datetime.now())
     month = date[5:7]
     day = date[8:10]
-    if month[0] == '0':
+    if month[0] == "0":
         month = date[6:7]
-    file_prefix = 'Jinnette.' + month + '_' + day + '.'
+    file_prefix = "Jinnette." + month + "_" + day + "."
     print(file_prefix)
     pc.copy(file_prefix)
 

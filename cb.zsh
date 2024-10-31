@@ -11,8 +11,10 @@
 # Documentation:
 # @raycast.description uses clipboard creator
 
-cd /Users/ryanjinnette/Documents/Code/ClipBoard/
-source venv/bin/activate
-python3 Clipboard_Creator.py
+cd /Users/ryanjinnette/Code/ClipBoard/
+source /Users/ryanjinnette/Code/ClipBoard/venv/bin/activate
+pip list
+which python3
+python Clipboard_Creator.py
 deactivate
 
